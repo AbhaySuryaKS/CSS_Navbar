@@ -1,0 +1,110 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;  
+    cursor: default;    
+}
+
+/* Style for body */
+body {
+    width: 100%;
+    height: 100vh;
+    background: url('back.png') no-repeat center center; 
+    background-size: cover;    
+    display: flex;
+    justify-content: center;    
+    align-items: center;      
+    flex-direction: column;  
+}
+
+/* Style for navbar */
+nav {
+    width: 80%;
+    max-width: 900px;
+    min-width: 400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    backdrop-filter: blur(30px);   
+    border-radius: 20px;         
+    overflow: hidden;              
+    box-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
+    position: relative;           
+}
+
+/* Style for navbar links */
+a {
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* Decorative line below link */
+a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 4px;
+    background-color: #7fff00;
+    bottom: -7px;
+    transition: width 1s;
+    border-radius: 5px;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: orangered;
+}
+
+/* Active effect for links */
+a:active {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 5px red;
+}
+
+/* Expand the decorative line on hover */
+a:hover:before {
+    width: 100%;
+}
+
+/* Bottom gradient animation */
+#grad {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, red, orange, yellow, blue, navy);
+    background-size: 300% 300%;
+    animation: move 5s infinite ease-in-out;
+}
+
+/* Top gradient animation */
+#grad2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, navy, blue, yellow, orange, red);
+    background-size: 300% 300%;
+    animation: move 5s infinite ease-in-out;
+}
+
+/* Keyframes for gradient animation */
+@keyframes move {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0;
+    }
+}
