@@ -53,4 +53,4 @@ A sleek, responsive, and interactive navigation bar with animated gradients and 
 ## License
 
 This project is open-source and free to use.
-https://codepen.io/codemaster2301/pen/abrrEPO
+https://codepen.io/AbhaySuryaKS/pen/abrrEPO
